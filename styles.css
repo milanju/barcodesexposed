@@ -1,0 +1,32 @@
+body {
+}
+
+html {
+}
+#ladder-table{
+  width: 100%;
+}
+
+.app-container {
+  max-width: 1600px;
+  width: calc(100% - 16px);
+  margin: 0 auto;
+}
+
+.app-content {
+}
+
+.app-layout {
+  background-color: #303030;
+}
+#rank-th {
+  max-width: 10px;
+}
+
+.mdl-data-table th {
+  color: #FFF;
+}
+
+.mdl-data-table tbody tr:hover {
+  background-color: #505050;
+}

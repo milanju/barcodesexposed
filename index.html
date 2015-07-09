@@ -1,11 +1,44 @@
 <html>
-<head>
-  <script src="jquery-1.11.3.min.js"></script>
-  <script src="app.js"></script>
-</head>
-<body>
-
-<div id="ladder"></div>
-
-</body>
+  <head>
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="styles.css">
+    <script src="jquery-1.11.3.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div class="app-layout mdl-layout mdl-layout--fixed-header mdl-js-layout">
+      <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--grey-900">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">Barcodes Exposed</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation -->
+        </div>
+      </header>
+      <main class="mdl-layout__content app-main">
+        <div class="app-container mdl-grid">
+          <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+          <div class="app-content mdl-shadow--4dp content mdl-cell mdl-cell--8-col">
+            <table id="ladder-table" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp mdl-color--grey-800 mdl-color-text--white">
+              <thead class="mdl-color-text--white">
+                <tr class="mdl-color-text--white">
+                  <th id="rank-th">Rank</th>
+                  <th class="mdl-data-table__cell--non-numeric">Region</th>
+                  <th class="mdl-data-table__cell--non-numeric">Name</th>
+                  <th>Wins</th>
+                  <th>Losses</th>
+                  <th>Points</th>
+                </tr>
+              </thead>
+              <tbody id="ladder-table-body">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
 </html>
