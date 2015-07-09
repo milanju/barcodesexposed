@@ -1,3 +1,23 @@
-<script src="jquery-1.11.3.min.js"></script>
-<script src="app.js"></script>
-Hello World
+<html>
+<head>
+  <script src="jquery-1.11.3.min.js"></script>
+</head>
+<body>
+
+<div id="ladder"></div>
+
+<script>
+(function() {
+  var ladderAPI = "https://eu.api.battle.net/sc2/ladder/grandmaster?locale=en_GB&apikey=hqcmbnfhfr6xuzmt29yrkcy3a23ekjz2";
+  var ladder = $.getJSON(ladderAPI);
+  $.getJSON(ladderAPI)
+    .done(function( data ) {
+      $.each( data.ladderMembers, function( i, item ) {
+        $( "<p>" + item.character.displayName + "</p>" ).appendTo( "#ladder" );
+      });
+    });
+})();
+</script>
+
+</body>
+</html>
