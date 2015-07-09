@@ -26,3 +26,7 @@
 .mdl-data-table tbody tr:hover {
   background-color: #505050;
 }
+
+.mdl-spinner {
+  margin: 0 auto;
+}
