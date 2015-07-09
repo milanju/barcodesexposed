@@ -13,11 +13,19 @@
   $.getJSON('alias.json', function(data) {
     console.log('success');
     console.log(data);
+    alias = data;
   })
   $.getJSON(ladderAPI)
     .done(function( data ) {
-      $.each( data.ladderMembers, function( i, item ) {
-        $( "<p>" + item.character.displayName + "</p>" ).appendTo( "#ladder" );
+      var name;
+      $.each( data.ladderMembers, function(i, item) {
+        name = item.character.displayName;
+        $.each(alias.exposedBarcodes, function(j, jtem) {
+          if(item.character.id === jtem.id) {
+            name += " // " + jtem.alias;
+          }
+        });
+        $( "<p>" + name + "</p>" ).appendTo( "#ladder" );
       });
     });
 })();
