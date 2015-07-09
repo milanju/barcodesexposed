@@ -1,10 +1,15 @@
-<html>
+<!doctype html>
   <head>
+    <!--[if lte IE 9]>
+    <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.0/jquery.xdomainrequest.min.js'></script>
+    <![endif]-->
+    <!--[if lte IE 10]>
+    <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.0/jquery.xdomainrequest.min.js'></script>
+    <![endif]-->
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
     <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="pacman.min.css">
     <script src="jquery-1.11.3.min.js"></script>
     <script src="app.js"></script>
   </head>
@@ -13,7 +18,7 @@
       <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--grey-900">
         <div class="mdl-layout__header-row">
           <!-- Title -->
-          <span class="mdl-layout-title">Barcodes Exposed</span>
+          <span class="mdl-layout-title">Barcodes Exposed - EU GrandMaster</span>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation -->
@@ -23,7 +28,7 @@
       <main class="mdl-layout__content app-main">
         <div class="app-container mdl-grid">
           <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
-          <div class="app-content mdl-shadow--4dp content mdl-cell mdl-cell--8-col">
+          <div class="app-content content mdl-cell mdl-cell--8-col">
             <table id="ladder-table" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp mdl-color--grey-800 mdl-color-text--white">
               <thead class="mdl-color-text--white">
                 <tr class="mdl-color-text--white">

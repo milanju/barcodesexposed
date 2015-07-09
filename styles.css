@@ -8,9 +8,6 @@
   margin: 0 auto;
 }
 
-.app-content {
-}
-
 .app-layout {
   background-color: #303030;
   overflow-y: scroll;
@@ -27,6 +24,13 @@
   background-color: #505050;
 }
 
-.mdl-spinner {
-  margin: 0 auto;
+.aka {
+  color: red;
+  display: inline-block;
+  font-weight: bold;
+}
+
+a {
+  color: #FFF;
+  text-decoration: none;
 }
