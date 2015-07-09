@@ -9,7 +9,11 @@
 <script>
 (function() {
   var ladderAPI = "https://eu.api.battle.net/sc2/ladder/grandmaster?locale=en_GB&apikey=hqcmbnfhfr6xuzmt29yrkcy3a23ekjz2";
-  var ladder = $.getJSON(ladderAPI);
+  var alias;
+  $.getJSON('alias.json', function(data) {
+    console.log('success');
+    console.log(data);
+  })
   $.getJSON(ladderAPI)
     .done(function( data ) {
       $.each( data.ladderMembers, function( i, item ) {
