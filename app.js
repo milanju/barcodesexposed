@@ -30,7 +30,7 @@ $(document).ready(function() {
           .appendTo("#ladder-table-body");
         rank++;
       });
-      $(".la-pacman").hide();
+      //$(".la-pacman").hide();
       $(".app-content").fadeIn();
     });
   });
