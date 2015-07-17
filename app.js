@@ -1,15 +1,10 @@
 $(document).ready(function() {
   $(".app-content").hide();
-  console.log("Hello!");
   var ladderAPI = "https://eu.api.battle.net/sc2/ladder/grandmaster?locale=en_GB&apikey=hqcmbnfhfr6xuzmt29yrkcy3a23ekjz2";
   var alias;
-  console.log("...");
   $.getJSON('https://dl.dropboxusercontent.com/s/tyhsuf2poddp89b/alias.json').done (function(data) {
-    console.log(".........");
     alias = data;
-    console.log("1");
     $.getJSON(ladderAPI).done(function(data) {
-        console.log("0");
         var id;
         var rank = 1;
         var region;
@@ -18,11 +13,9 @@ $(document).ready(function() {
         var losses;
         var points;
         var race;
-        console.log("pls");
         $.each(data.ladderMembers, function(i, item) {
           region = "EU";
           name = item.character.displayName;
-          console.log(name);
           id = item.character.id;
           wins = item.wins;
           losses = item.losses;
@@ -48,7 +41,6 @@ $(document).ready(function() {
           });
           name = "<a href='http://eu.battle.net/sc2/en" + item.character.profilePath + "' target='_blank'>" + name + "</a>";
           name = "<img src='images/" + race + ".png' alt='" + race + "'>" + name;
-          console.log("appending");
           $("<tr><td id='rank-th'>" + rank
           + "</td><td class='mdl-data-table__cell--non-numeric'>" + region
           + "</td><td class='mdl-data-table__cell--non-numeric'>" + name
@@ -56,7 +48,6 @@ $(document).ready(function() {
           + "</td><td>" + losses
           + "</td><td>" + points
           + "</td></tr>").appendTo("#ladder-table-body");
-          console.log("appended");
           rank++;
         });
         $(".mdl-spinner").hide();
